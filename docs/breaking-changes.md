@@ -14,6 +14,16 @@ This document uses the following convention to categorize breaking changes:
 
 ## Planned Breaking API Changes (43.0)
 
+### Removed: Windows 32-bit (ia32) and Linux 32-bit ARM (armv7l) support
+
+Electron no longer publishes prebuilt binaries for 32-bit platforms: Windows x86
+(`win32-ia32`) and Linux ARM (`linux-armv7l`). All related release artifacts
+(`chromedriver`, `mksnapshot`, `ffmpeg`, and the Windows x86 `node.lib` on the
+Electron headers CDN) are no longer published either.
+
+Older versions of Electron will continue to support these platforms, but Electron
+v43.0.0 and higher will only be published for 64-bit platforms.
+
 ### Removed: Unity desktop environment support on Linux
 
 Unity has not been the default desktop environment in Ubuntu LTS since version 16.04, which is not supported by current versions of Electron. The deprecation does not

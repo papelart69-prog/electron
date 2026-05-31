@@ -56,7 +56,7 @@ jobs:
         - /var/run/sas:/var/run/sas
     env:
       CHROMIUM_GIT_COOKIE: ${{ secrets.CHROMIUM_GIT_COOKIE }}
-      GCLIENT_EXTRA_ARGS: '--custom-var=checkout_arm=True --custom-var=checkout_arm64=True'
+      GCLIENT_EXTRA_ARGS: '--custom-var=checkout_arm64=True'
     steps:
     - name: Checkout Electron
       uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
